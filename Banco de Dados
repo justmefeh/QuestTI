@@ -1,0 +1,15 @@
+create database questti;
+use questti;
+
+create table estudante(
+id int primary key auto_increment,
+nome_estudante varchar(120) not null,
+cpf varchar(14) not null,
+email varchar(120) not null,
+senha varchar(120) not null,
+confirmar_senha varchar(120) not null,
+dt_nascimento date not null,
+sexo ENUM ('Masculino', 'Feminino', 'Outro'),
+UNIQUE (email),
+UNIQUE(cpf)
+);
